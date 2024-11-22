@@ -19,40 +19,15 @@ The Genetic Algorithm simulates evolution to optimize the string-matching proces
 
 2. **Fitness Evaluation**
    - Compare each string to the target `"HELLO WORLD"`.
-   - Fitness is calculated as:
-     ```python
-     def fitness_function(individual, target):
-         matches = sum(1 for i, t in zip(individual, target) if i == t)
-         return matches / len(target)
-     ```
+   - Fitness is calculated as
 
 3. **Selection**
-   - Use **Tournament Selection** to choose parents:
-     ```python
-     def tournament_selection(population, fitness_scores, tournament_size):
-         selected = random.choices(population, k=tournament_size)
-         return max(selected, key=lambda x: fitness_scores[x])
-     ```
+   - Use **Tournament Selection** to choose parents
 
 4. **Crossover**
-   - Combine parents to create offspring:
-     ```python
-     def crossover(parent1, parent2):
-         point = random.randint(0, len(parent1))
-         return parent1[:point] + parent2[point:]
-     ```
-
+   - Combine parents to create offspring
 5. **Mutation**
-   - Introduce random changes for diversity:
-     ```python
-     def mutate(individual, mutation_rate):
-         mutated = ''.join(
-             char if random.random() > mutation_rate else random.choice(string.ascii_uppercase + " ")
-             for char in individual
-         )
-         return mutated
-     ```
-
+   - Introduce random changes for diversity
 6. **Repeat**
    - Create new generations until a perfect match is found or a limit is reached.
 
@@ -82,25 +57,5 @@ The Genetic Algorithm simulates evolution to optimize the string-matching proces
 
 ---
 
-## Example Usage
-
-```python
-# Import required modules
-import random
-import string
-
-# Initialize parameters
-target = "HELLO WORLD"
-population_size = 100
-mutation_rate = 0.01
-max_generations = 1000
-
-# Run the Genetic Algorithm
-best_solution = genetic_algorithm(
-    target=target,
-    population_size=population_size,
-    mutation_rate=mutation_rate,
-    max_generations=max_generations,
-)
 
 print(f"Best solution: {best_solution}")
