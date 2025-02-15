@@ -1,7 +1,7 @@
 
 # Genetic Algorithm: Modeling Evolution
 
-This repository contains the implementation of a Genetic Algorithm (GA) designed to evolve a random string into the target string **"HELLO WORLD"**. The project also includes an analysis of various parameters influencing the algorithm's efficiency.
+This repository contains the implementation of a Genetic Algorithm (GA) designed to evolve a random string into the target string **"HELLO WORLD"**. The project also includes an analysis of various parameters influencing the algorithm's efficiency. Paper - https://drive.google.com/file/d/1ggh4R8mjI9Wj5kvNzXB2FtNWfBa3BVOU/view?usp=sharing
 
 ---
 
